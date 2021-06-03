@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @author ritik
  */
-public class SieveOfEratosthenes {
+public class SegmentedSieve {
     
     
     public static void sieve(int n)

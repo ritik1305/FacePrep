@@ -24,8 +24,6 @@ public class PrimeNumbers_tillN {
       }
       if(check==true)
         System.out.print(i+" ");
-    }
-    
-    
+    }    
   }
 }

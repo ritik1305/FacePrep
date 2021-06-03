@@ -5,23 +5,30 @@
  */
 package FacePrep.MathProblems.Set1;
 import java.util.*;
-
 /**
  *
- * 
  * @author ritik
  */
-public class ReverseANumber {
-    public  static void main(String[] args){
+public class SumofCoPrime {
+    
+    public static int gcd(int i,int n){
+        if(i==0){
+            return n;
+        }
+        return gcd(n%i , i);
+    }
+    
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int rev=0;
-        for(int i=n;i>0;i/=10){
-            int temp = i%10;
-            rev = 10*rev + temp;
+        
+        int sum = 0;
+        
+        for(int i=1;i<=n; i++){
+            if(gcd(i,n)==1){
+                sum+=i;
+            }
         }
-        
-        System.out.println(rev);
-        
+        System.out.println(sum);
     }
 }

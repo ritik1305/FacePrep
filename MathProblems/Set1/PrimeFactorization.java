@@ -8,20 +8,19 @@ import java.util.*;
 
 /**
  *
- * 
  * @author ritik
  */
-public class ReverseANumber {
-    public  static void main(String[] args){
+public class PrimeFactorization {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int rev=0;
-        for(int i=n;i>0;i/=10){
-            int temp = i%10;
-            rev = 10*rev + temp;
+        for(int i=2;i<=n;){
+            if(n%i==0){
+                System.out.print(i+" ");
+                n/=i;
+            }else{
+                i++;
+            }
         }
-        
-        System.out.println(rev);
-        
-    }
+    }    
 }
